@@ -1,0 +1,16 @@
+pt-BR:
+  active_record:
+    attributes:
+      candidate:
+        name: 'Nome'
+        cpf: 'CPF'
+        birthdate: 'Data de Nascimento'
+        gender: 'Sexo'
+        gender:
+          male: 'Masculino'
+          female: 'Feminino'
+
+    menu:
+      candidate:
+        new: 'Novo candidato'
+        edit: 'Editar candidato'

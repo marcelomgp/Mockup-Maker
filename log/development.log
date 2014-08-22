@@ -812,3 +812,1222 @@ Started GET "/assets/candidates.js?body=1" for 127.0.0.1 at 2014-08-21 17:49:05 
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-21 17:49:05 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "genders" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-08-22 15:10:29.201790"], ["name", "Male"], ["updated_at", "2014-08-22 15:10:29.201790"]]
+  [1m[35m (129.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "genders" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-08-22 15:10:29.409719"], ["name", "Female"], ["updated_at", "2014-08-22 15:10:29.409719"]]
+  [1m[36m (119.0ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-22 12:10:49 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CandidatesController#index as HTML
+  [1m[35mCandidate Load (0.5ms)[0m  SELECT "candidates".* FROM "candidates"
+  Rendered candidates/index.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 431ms (Views: 419.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-22 12:10:49 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-22 12:10:49 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 12:10:49 -0300
+
+
+Started GET "/assets/candidates.css?body=1" for 127.0.0.1 at 2014-08-22 12:10:49 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 12:10:49 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 12:10:49 -0300
+
+
+Started GET "/assets/candidates.js?body=1" for 127.0.0.1 at 2014-08-22 12:10:49 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-22 12:10:49 -0300
+
+
+Started DELETE "/candidates/2" for 127.0.0.1 at 2014-08-22 12:10:56 -0300
+Processing by CandidatesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tw6BtmY3mxVRQncqhLsd16I7tLTw/ENNDehAaLTZO4o=", "id"=>"2"}
+  [1m[36mCandidate Load (0.3ms)[0m  [1mSELECT  "candidates".* FROM "candidates"  WHERE "candidates"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "candidates" WHERE "candidates"."id" = ?[0m  [["id", 2]]
+  [1m[35m (129.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/candidates
+Completed 302 Found in 140ms (ActiveRecord: 130.0ms)
+
+
+Started GET "/candidates" for 127.0.0.1 at 2014-08-22 12:10:56 -0300
+Processing by CandidatesController#index as HTML
+  [1m[36mCandidate Load (0.4ms)[0m  [1mSELECT "candidates".* FROM "candidates"[0m
+  Rendered candidates/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 12:10:56 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 12:10:56 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 12:10:56 -0300
+
+
+Started DELETE "/candidates/3" for 127.0.0.1 at 2014-08-22 12:10:58 -0300
+Processing by CandidatesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tw6BtmY3mxVRQncqhLsd16I7tLTw/ENNDehAaLTZO4o=", "id"=>"3"}
+  [1m[35mCandidate Load (0.1ms)[0m  SELECT  "candidates".* FROM "candidates"  WHERE "candidates"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "candidates" WHERE "candidates"."id" = ?  [["id", 3]]
+  [1m[36m (198.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/candidates
+Completed 302 Found in 201ms (ActiveRecord: 198.3ms)
+
+
+Started GET "/candidates" for 127.0.0.1 at 2014-08-22 12:10:58 -0300
+Processing by CandidatesController#index as HTML
+  [1m[35mCandidate Load (0.3ms)[0m  SELECT "candidates".* FROM "candidates"
+  Rendered candidates/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 12:10:58 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 12:10:58 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 12:10:58 -0300
+
+
+Started GET "/candidates/new" for 127.0.0.1 at 2014-08-22 12:11:02 -0300
+Processing by CandidatesController#new as HTML
+  [1m[36mGender Load (0.2ms)[0m  [1mSELECT "genders".* FROM "genders"[0m
+  Rendered candidates/_form.html.erb (126.7ms)
+  Rendered candidates/new.html.erb within layouts/application (139.9ms)
+Completed 200 OK in 147ms (Views: 145.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/candidates" for 127.0.0.1 at 2014-08-22 12:15:47 -0300
+Processing by CandidatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tw6BtmY3mxVRQncqhLsd16I7tLTw/ENNDehAaLTZO4o=", "candidate"=>{"name"=>"", "cpf"=>"", "birthdate(1i)"=>"2014", "birthdate(2i)"=>"8", "birthdate(3i)"=>"22", "gender"=>"2"}, "commit"=>"Create Candidate"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mGender Load (0.2ms)[0m  SELECT "genders".* FROM "genders"
+  Rendered candidates/_form.html.erb (8.8ms)
+  Rendered candidates/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 28ms (Views: 22.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-22 12:15:47 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 12:15:47 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 12:15:47 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 12:15:47 -0300
+
+
+Started GET "/candidates" for 127.0.0.1 at 2014-08-22 12:15:49 -0300
+Processing by CandidatesController#index as HTML
+  [1m[36mCandidate Load (0.2ms)[0m  [1mSELECT "candidates".* FROM "candidates"[0m
+  Rendered candidates/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 12:15:49 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 12:15:49 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-22 12:15:50 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 12:15:50 -0300
+
+
+Started GET "/candidates/new" for 127.0.0.1 at 2014-08-22 12:18:20 -0300
+Processing by CandidatesController#new as HTML
+  [1m[35mGender Load (0.2ms)[0m  SELECT "genders".* FROM "genders"
+  Rendered candidates/_form.html.erb (11.9ms)
+  Rendered candidates/new.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/candidates" for 127.0.0.1 at 2014-08-22 12:19:15 -0300
+Processing by CandidatesController#index as HTML
+  [1m[36mCandidate Load (0.6ms)[0m  [1mSELECT "candidates".* FROM "candidates"[0m
+  Rendered candidates/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/candidates/new" for 127.0.0.1 at 2014-08-22 12:19:35 -0300
+Processing by CandidatesController#new as HTML
+  [1m[35mGender Load (0.3ms)[0m  SELECT "genders".* FROM "genders"
+  Rendered candidates/_form.html.erb (16.9ms)
+  Rendered candidates/new.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candidates" for 127.0.0.1 at 2014-08-22 12:19:48 -0300
+Processing by CandidatesController#index as HTML
+  [1m[36mCandidate Load (0.3ms)[0m  [1mSELECT "candidates".* FROM "candidates"[0m
+  Rendered candidates/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candidates/new" for 127.0.0.1 at 2014-08-22 12:19:49 -0300
+Processing by CandidatesController#new as HTML
+  [1m[35mGender Load (0.2ms)[0m  SELECT "genders".* FROM "genders"
+  Rendered candidates/_form.html.erb (14.1ms)
+  Rendered candidates/new.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.2ms)
+  [1m[36mCandidate Load (2.3ms)[0m  [1mSELECT "candidates".* FROM "candidates"[0m
+
+
+Started POST "/candidates" for 127.0.0.1 at 2014-08-22 12:20:42 -0300
+Processing by CandidatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tw6BtmY3mxVRQncqhLsd16I7tLTw/ENNDehAaLTZO4o=", "candidate"=>{"name"=>"John Doe", "cpf"=>"1231312", "birthdate(1i)"=>"2014", "birthdate(2i)"=>"8", "birthdate(3i)"=>"22", "gender"=>"1"}, "commit"=>"Create Candidate"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "candidates" ("birthdate", "cpf", "created_at", "gender", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["birthdate", "2014-08-22"], ["cpf", 1231312], ["created_at", "2014-08-22 15:20:42.957737"], ["gender", "1"], ["name", "John Doe"], ["updated_at", "2014-08-22 15:20:42.957737"]]
+  [1m[36m (310.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/candidates/4
+Completed 302 Found in 317ms (ActiveRecord: 311.2ms)
+
+
+Started GET "/candidates/4" for 127.0.0.1 at 2014-08-22 12:20:43 -0300
+Processing by CandidatesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mCandidate Load (0.2ms)[0m  SELECT  "candidates".* FROM "candidates"  WHERE "candidates"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered candidates/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 12ms (Views: 8.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 12:20:43 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 12:20:43 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 12:20:43 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-22 12:20:43 -0300
+
+
+Started GET "/candidates" for 127.0.0.1 at 2014-08-22 12:20:51 -0300
+Processing by CandidatesController#index as HTML
+  [1m[36mCandidate Load (0.6ms)[0m  [1mSELECT "candidates".* FROM "candidates"[0m
+  Rendered candidates/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.6ms)
+  [1m[35mCandidate Load (0.6ms)[0m  SELECT "candidates".* FROM "candidates"
+
+
+Started GET "/candidates" for 127.0.0.1 at 2014-08-22 12:21:27 -0300
+Processing by CandidatesController#index as HTML
+  [1m[35mCandidate Load (0.3ms)[0m  SELECT "candidates".* FROM "candidates"
+  Rendered candidates/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/candidates.css?body=1" for 127.0.0.1 at 2014-08-22 12:21:27 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-22 12:21:27 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 12:21:27 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-22 12:21:27 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 12:21:27 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 12:21:27 -0300
+
+
+Started GET "/assets/candidates.js?body=1" for 127.0.0.1 at 2014-08-22 12:21:27 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-22 12:21:27 -0300
+
+
+Started GET "/candidates" for 127.0.0.1 at 2014-08-22 12:21:29 -0300
+Processing by CandidatesController#index as HTML
+  [1m[36mCandidate Load (0.3ms)[0m  [1mSELECT "candidates".* FROM "candidates"[0m
+  Rendered candidates/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/candidates.css?body=1" for 127.0.0.1 at 2014-08-22 12:21:29 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-22 12:21:29 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-22 12:21:29 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 12:21:29 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 12:21:29 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 12:21:29 -0300
+
+
+Started GET "/assets/candidates.js?body=1" for 127.0.0.1 at 2014-08-22 12:21:29 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-22 12:21:29 -0300
+
+
+Started GET "/candidates" for 127.0.0.1 at 2014-08-22 12:21:30 -0300
+Processing by CandidatesController#index as HTML
+  [1m[35mCandidate Load (0.2ms)[0m  SELECT "candidates".* FROM "candidates"
+  Rendered candidates/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 12:21:30 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 12:21:30 -0300
+
+
+Started GET "/assets/candidates.js?body=1" for 127.0.0.1 at 2014-08-22 12:21:30 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-22 12:21:30 -0300
+
+
+Started GET "/assets/candidates.css?body=1" for 127.0.0.1 at 2014-08-22 12:21:30 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 12:21:30 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-22 12:21:30 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-22 12:21:30 -0300
+
+
+Started GET "/candidates" for 127.0.0.1 at 2014-08-22 12:21:33 -0300
+Processing by CandidatesController#index as HTML
+  [1m[36mCandidate Load (0.2ms)[0m  [1mSELECT "candidates".* FROM "candidates"[0m
+  Rendered candidates/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/candidates.css?body=1" for 127.0.0.1 at 2014-08-22 12:21:33 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 12:21:33 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-22 12:21:33 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 12:21:33 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-22 12:21:33 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 12:21:33 -0300
+
+
+Started GET "/assets/candidates.js?body=1" for 127.0.0.1 at 2014-08-22 12:21:33 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-22 12:21:33 -0300
+
+
+Started GET "/candidates/4" for 127.0.0.1 at 2014-08-22 12:21:35 -0300
+Processing by CandidatesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mCandidate Load (0.3ms)[0m  SELECT  "candidates".* FROM "candidates"  WHERE "candidates"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered candidates/show.html.erb within layouts/application (73.2ms)
+Completed 500 Internal Server Error in 81ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    17: 
+    18: <p>
+    19:   <strong>Gender:</strong>
+    20:   <%= @gender.name %>
+    21: </p>
+    22: 
+    23: <%= link_to 'Edit', edit_candidate_path(@candidate) %> |
+  app/views/candidates/show.html.erb:20:in `_app_views_candidates_show_html_erb___565731955084411672_70357607656740'
+
+
+  Rendered /home/menezes/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/menezes/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/menezes/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.6ms)
+
+
+Started GET "/candidates/4" for 127.0.0.1 at 2014-08-22 12:21:36 -0300
+Processing by CandidatesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCandidate Load (0.2ms)[0m  [1mSELECT  "candidates".* FROM "candidates"  WHERE "candidates"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered candidates/show.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    17: 
+    18: <p>
+    19:   <strong>Gender:</strong>
+    20:   <%= @gender.name %>
+    21: </p>
+    22: 
+    23: <%= link_to 'Edit', edit_candidate_path(@candidate) %> |
+  app/views/candidates/show.html.erb:20:in `_app_views_candidates_show_html_erb___565731955084411672_70357606305220'
+
+
+  Rendered /home/menezes/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/menezes/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/menezes/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-22 12:21:42 -0300
+Processing by CandidatesController#index as HTML
+  [1m[35mCandidate Load (0.2ms)[0m  SELECT "candidates".* FROM "candidates"
+  Rendered candidates/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/candidates.css?body=1" for 127.0.0.1 at 2014-08-22 12:21:42 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-22 12:21:42 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 12:21:42 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-22 12:21:42 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 12:21:42 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 12:21:42 -0300
+
+
+Started GET "/assets/candidates.js?body=1" for 127.0.0.1 at 2014-08-22 12:21:42 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-22 12:21:42 -0300
+
+
+Started GET "/candidates/new" for 127.0.0.1 at 2014-08-22 12:21:52 -0300
+Processing by CandidatesController#new as HTML
+  [1m[36mGender Load (0.2ms)[0m  [1mSELECT "genders".* FROM "genders"[0m
+  Rendered candidates/_form.html.erb (14.3ms)
+  Rendered candidates/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/candidates" for 127.0.0.1 at 2014-08-22 12:22:31 -0300
+Processing by CandidatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tw6BtmY3mxVRQncqhLsd16I7tLTw/ENNDehAaLTZO4o=", "candidate"=>{"name"=>"John Doe", "cpf"=>"", "birthdate(1i)"=>"2014", "birthdate(2i)"=>"8", "birthdate(3i)"=>"22", "gender"=>"1"}, "commit"=>"Create Candidate"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mGender Load (0.2ms)[0m  SELECT "genders".* FROM "genders"
+  Rendered candidates/_form.html.erb (7.3ms)
+  Rendered candidates/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/candidates.css?body=1" for 127.0.0.1 at 2014-08-22 12:22:31 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-22 12:22:31 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-22 12:22:31 -0300
+
+
+Started GET "/assets/candidates.js?body=1" for 127.0.0.1 at 2014-08-22 12:22:31 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 12:22:31 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 12:22:31 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 12:22:31 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-22 12:22:31 -0300
+
+
+Started POST "/candidates" for 127.0.0.1 at 2014-08-22 12:22:48 -0300
+Processing by CandidatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tw6BtmY3mxVRQncqhLsd16I7tLTw/ENNDehAaLTZO4o=", "candidate"=>{"name"=>"John Doe", "cpf"=>"1312312312", "birthdate(1i)"=>"2014", "birthdate(2i)"=>"8", "birthdate(3i)"=>"22", "gender"=>"1"}, "commit"=>"Create Candidate"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "candidates" ("birthdate", "cpf", "created_at", "gender", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["birthdate", "2014-08-22"], ["cpf", 1312312312], ["created_at", "2014-08-22 15:22:48.629658"], ["gender", "1"], ["name", "John Doe"], ["updated_at", "2014-08-22 15:22:48.629658"]]
+  [1m[36m (290.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/candidates/5
+Completed 302 Found in 295ms (ActiveRecord: 290.6ms)
+
+
+Started GET "/candidates/5" for 127.0.0.1 at 2014-08-22 12:22:48 -0300
+Processing by CandidatesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mCandidate Load (0.2ms)[0m  SELECT  "candidates".* FROM "candidates"  WHERE "candidates"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered candidates/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-22 12:22:49 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-22 12:22:49 -0300
+
+
+Started GET "/assets/candidates.css?body=1" for 127.0.0.1 at 2014-08-22 12:22:49 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 12:22:49 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 12:22:49 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 12:22:49 -0300
+
+
+Started GET "/assets/candidates.js?body=1" for 127.0.0.1 at 2014-08-22 12:22:49 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-22 12:22:49 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveGenderFromCandidate (20140822152454)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TEMPORARY TABLE "acandidates" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cpf" integer, "birthdate" date, "gender" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "candidates"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "acandidates" ("id","name","cpf","birthdate","gender","created_at","updated_at") VALUES (4, 'John Doe', 1231312, '2014-08-22', '1', '2014-08-22 15:20:42.957737', '2014-08-22 15:20:42.957737')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "acandidates" ("id","name","cpf","birthdate","gender","created_at","updated_at") VALUES (5, 'John Doe', 1312312312, '2014-08-22', '1', '2014-08-22 15:22:48.629658', '2014-08-22 15:22:48.629658')
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "candidates"[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "candidates" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "cpf" integer, "birthdate" date, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.2ms)[0m  [1mSELECT * FROM "acandidates"[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "candidates" ("id","name","cpf","birthdate","created_at","updated_at") VALUES (4, 'John Doe', 1231312, '2014-08-22', '2014-08-22 15:20:42.957737', '2014-08-22 15:20:42.957737')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "candidates" ("id","name","cpf","birthdate","created_at","updated_at") VALUES (5, 'John Doe', 1312312312, '2014-08-22', '2014-08-22 15:22:48.629658', '2014-08-22 15:22:48.629658')[0m
+  [1m[35m (0.5ms)[0m  DROP TABLE "acandidates"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140822152454"]]
+  [1m[35m (168.6ms)[0m  commit transaction
+Migrating to AddGenderRefToCandidate (20140822152511)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "candidates" ADD "gender_id" integer
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  CREATE  INDEX "index_candidates_on_gender_id" ON "candidates" ("gender_id")
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140822152511"]]
+  [1m[35m (137.1ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_candidates_on_gender_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_candidates_on_gender_id' AND type='index'
+
+
+
+Started GET "/candidates/5" for 127.0.0.1 at 2014-08-22 12:52:21 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CandidatesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mCandidate Load (0.2ms)[0m  SELECT  "candidates".* FROM "candidates"  WHERE "candidates"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered candidates/show.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 116ms (Views: 25.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-22 12:52:21 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 12:52:21 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 12:52:21 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-22 12:52:21 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 12:52:21 -0300
+
+
+Started GET "/assets/candidates.css?body=1" for 127.0.0.1 at 2014-08-22 12:52:21 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-22 12:52:21 -0300
+
+
+Started GET "/assets/candidates.js?body=1" for 127.0.0.1 at 2014-08-22 12:52:21 -0300
+
+
+Started GET "/candidates" for 127.0.0.1 at 2014-08-22 12:52:25 -0300
+Processing by CandidatesController#index as HTML
+  [1m[36mCandidate Load (0.7ms)[0m  [1mSELECT "candidates".* FROM "candidates"[0m
+  Rendered candidates/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/candidates/new" for 127.0.0.1 at 2014-08-22 12:52:26 -0300
+Processing by CandidatesController#new as HTML
+  [1m[35mGender Load (0.2ms)[0m  SELECT "genders".* FROM "genders"
+  Rendered candidates/_form.html.erb (12.3ms)
+  Rendered candidates/new.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/candidates" for 127.0.0.1 at 2014-08-22 12:52:33 -0300
+Processing by CandidatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tw6BtmY3mxVRQncqhLsd16I7tLTw/ENNDehAaLTZO4o=", "candidate"=>{"name"=>"John Doe", "cpf"=>"24142141", "birthdate(1i)"=>"2014", "birthdate(2i)"=>"8", "birthdate(3i)"=>"22", "gender"=>"1"}, "commit"=>"Create Candidate"}
+Completed 500 Internal Server Error in 2ms
+
+ActiveRecord::AssociationTypeMismatch (Gender(#17315280) expected, got String(#10111800)):
+  app/controllers/candidates_controller.rb:27:in `create'
+
+
+  Rendered /home/menezes/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.9ms)
+  Rendered /home/menezes/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/menezes/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/menezes/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.5ms)
+
+
+Started POST "/candidates" for 127.0.0.1 at 2014-08-22 12:52:58 -0300
+Processing by CandidatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tw6BtmY3mxVRQncqhLsd16I7tLTw/ENNDehAaLTZO4o=", "candidate"=>{"name"=>"John Doe", "cpf"=>"24142141", "birthdate(1i)"=>"2014", "birthdate(2i)"=>"8", "birthdate(3i)"=>"22", "gender"=>"1"}, "commit"=>"Create Candidate"}
+Unpermitted parameters: gender
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "candidates" ("birthdate", "cpf", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["birthdate", "2014-08-22"], ["cpf", 24142141], ["created_at", "2014-08-22 15:52:58.510434"], ["name", "John Doe"], ["updated_at", "2014-08-22 15:52:58.510434"]]
+  [1m[36m (231.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/candidates/6
+Completed 302 Found in 247ms (ActiveRecord: 232.5ms)
+
+
+Started GET "/candidates/6" for 127.0.0.1 at 2014-08-22 12:52:58 -0300
+Processing by CandidatesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mCandidate Load (0.3ms)[0m  SELECT  "candidates".* FROM "candidates"  WHERE "candidates"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered candidates/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/candidates.css?body=1" for 127.0.0.1 at 2014-08-22 12:52:58 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 12:52:58 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 12:52:58 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-22 12:52:58 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 12:52:58 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-22 12:52:58 -0300
+
+
+Started GET "/assets/candidates.js?body=1" for 127.0.0.1 at 2014-08-22 12:52:58 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-22 12:52:58 -0300
+
+
+Started GET "/candidates" for 127.0.0.1 at 2014-08-22 12:53:02 -0300
+Processing by CandidatesController#index as HTML
+  [1m[36mCandidate Load (0.5ms)[0m  [1mSELECT "candidates".* FROM "candidates"[0m
+  Rendered candidates/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/candidates/new" for 127.0.0.1 at 2014-08-22 12:53:04 -0300
+Processing by CandidatesController#new as HTML
+  [1m[35mGender Load (0.3ms)[0m  SELECT "genders".* FROM "genders"
+  Rendered candidates/_form.html.erb (17.8ms)
+  Rendered candidates/new.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/candidates" for 127.0.0.1 at 2014-08-22 12:53:08 -0300
+Processing by CandidatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tw6BtmY3mxVRQncqhLsd16I7tLTw/ENNDehAaLTZO4o=", "candidate"=>{"name"=>"John Doe", "cpf"=>"343423432432", "birthdate(1i)"=>"2014", "birthdate(2i)"=>"8", "birthdate(3i)"=>"22", "gender"=>"2"}, "commit"=>"Create Candidate"}
+Unpermitted parameters: gender
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "candidates" ("birthdate", "cpf", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["birthdate", "2014-08-22"], ["cpf", 343423432432], ["created_at", "2014-08-22 15:53:08.080074"], ["name", "John Doe"], ["updated_at", "2014-08-22 15:53:08.080074"]]
+  [1m[36m (274.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/candidates/7
+Completed 302 Found in 284ms (ActiveRecord: 275.1ms)
+
+
+Started GET "/candidates/7" for 127.0.0.1 at 2014-08-22 12:53:08 -0300
+Processing by CandidatesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mCandidate Load (0.3ms)[0m  SELECT  "candidates".* FROM "candidates"  WHERE "candidates"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered candidates/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/candidates.css?body=1" for 127.0.0.1 at 2014-08-22 12:53:08 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-22 12:53:08 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 12:53:08 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 12:53:08 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 12:53:08 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-22 12:53:08 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-22 12:53:08 -0300
+
+
+Started GET "/assets/candidates.js?body=1" for 127.0.0.1 at 2014-08-22 12:53:08 -0300
+
+
+Started GET "/candidates" for 127.0.0.1 at 2014-08-22 12:53:10 -0300
+Processing by CandidatesController#index as HTML
+  [1m[36mCandidate Load (0.7ms)[0m  [1mSELECT "candidates".* FROM "candidates"[0m
+  Rendered candidates/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/candidates/4" for 127.0.0.1 at 2014-08-22 12:53:13 -0300
+Processing by CandidatesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tw6BtmY3mxVRQncqhLsd16I7tLTw/ENNDehAaLTZO4o=", "id"=>"4"}
+  [1m[35mCandidate Load (0.2ms)[0m  SELECT  "candidates".* FROM "candidates"  WHERE "candidates"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "candidates" WHERE "candidates"."id" = ?  [["id", 4]]
+  [1m[36m (215.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/candidates
+Completed 302 Found in 223ms (ActiveRecord: 216.5ms)
+
+
+Started GET "/candidates" for 127.0.0.1 at 2014-08-22 12:53:14 -0300
+Processing by CandidatesController#index as HTML
+  [1m[35mCandidate Load (0.3ms)[0m  SELECT "candidates".* FROM "candidates"
+  Rendered candidates/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/candidates.css?body=1" for 127.0.0.1 at 2014-08-22 12:53:14 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-22 12:53:14 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 12:53:14 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-22 12:53:14 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 12:53:14 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 12:53:14 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-22 12:53:14 -0300
+
+
+Started GET "/assets/candidates.js?body=1" for 127.0.0.1 at 2014-08-22 12:53:14 -0300
+
+
+Started DELETE "/candidates/5" for 127.0.0.1 at 2014-08-22 12:53:15 -0300
+Processing by CandidatesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tw6BtmY3mxVRQncqhLsd16I7tLTw/ENNDehAaLTZO4o=", "id"=>"5"}
+  [1m[36mCandidate Load (0.4ms)[0m  [1mSELECT  "candidates".* FROM "candidates"  WHERE "candidates"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "candidates" WHERE "candidates"."id" = ?[0m  [["id", 5]]
+  [1m[35m (275.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/candidates
+Completed 302 Found in 283ms (ActiveRecord: 276.1ms)
+
+
+Started GET "/candidates" for 127.0.0.1 at 2014-08-22 12:53:15 -0300
+Processing by CandidatesController#index as HTML
+  [1m[36mCandidate Load (0.3ms)[0m  [1mSELECT "candidates".* FROM "candidates"[0m
+  Rendered candidates/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/candidates.css?body=1" for 127.0.0.1 at 2014-08-22 12:53:16 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-22 12:53:16 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-22 12:53:16 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 12:53:16 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 12:53:16 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 12:53:16 -0300
+
+
+Started GET "/assets/candidates.js?body=1" for 127.0.0.1 at 2014-08-22 12:53:16 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-22 12:53:16 -0300
+
+
+Started DELETE "/candidates/6" for 127.0.0.1 at 2014-08-22 12:53:17 -0300
+Processing by CandidatesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tw6BtmY3mxVRQncqhLsd16I7tLTw/ENNDehAaLTZO4o=", "id"=>"6"}
+  [1m[35mCandidate Load (0.6ms)[0m  SELECT  "candidates".* FROM "candidates"  WHERE "candidates"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "candidates" WHERE "candidates"."id" = ?  [["id", 6]]
+  [1m[36m (221.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/candidates
+Completed 302 Found in 227ms (ActiveRecord: 222.8ms)
+
+
+Started GET "/candidates" for 127.0.0.1 at 2014-08-22 12:53:17 -0300
+Processing by CandidatesController#index as HTML
+  [1m[35mCandidate Load (0.3ms)[0m  SELECT "candidates".* FROM "candidates"
+  Rendered candidates/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-22 12:53:17 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 12:53:17 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 12:53:17 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 12:53:17 -0300
+
+
+Started GET "/assets/candidates.css?body=1" for 127.0.0.1 at 2014-08-22 12:53:17 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-22 12:53:17 -0300
+
+
+Started GET "/assets/candidates.js?body=1" for 127.0.0.1 at 2014-08-22 12:53:17 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-22 12:53:17 -0300
+
+
+Started DELETE "/candidates/7" for 127.0.0.1 at 2014-08-22 12:53:18 -0300
+Processing by CandidatesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tw6BtmY3mxVRQncqhLsd16I7tLTw/ENNDehAaLTZO4o=", "id"=>"7"}
+  [1m[36mCandidate Load (0.3ms)[0m  [1mSELECT  "candidates".* FROM "candidates"  WHERE "candidates"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "candidates" WHERE "candidates"."id" = ?[0m  [["id", 7]]
+  [1m[35m (205.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/candidates
+Completed 302 Found in 210ms (ActiveRecord: 206.4ms)
+
+
+Started GET "/candidates" for 127.0.0.1 at 2014-08-22 12:53:18 -0300
+Processing by CandidatesController#index as HTML
+  [1m[36mCandidate Load (0.4ms)[0m  [1mSELECT "candidates".* FROM "candidates"[0m
+  Rendered candidates/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 19ms (Views: 8.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/candidates.css?body=1" for 127.0.0.1 at 2014-08-22 12:53:18 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 12:53:18 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-22 12:53:18 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 12:53:18 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 12:53:18 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-22 12:53:18 -0300
+
+
+Started GET "/assets/candidates.js?body=1" for 127.0.0.1 at 2014-08-22 12:53:18 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-22 12:53:18 -0300
+
+
+Started GET "/candidates/new" for 127.0.0.1 at 2014-08-22 12:53:19 -0300
+Processing by CandidatesController#new as HTML
+  [1m[35mGender Load (0.3ms)[0m  SELECT "genders".* FROM "genders"
+  Rendered candidates/_form.html.erb (9.8ms)
+  Rendered candidates/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candidates" for 127.0.0.1 at 2014-08-22 12:54:21 -0300
+Processing by CandidatesController#index as HTML
+  [1m[36mCandidate Load (0.2ms)[0m  [1mSELECT "candidates".* FROM "candidates"[0m
+  Rendered candidates/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/candidates" for 127.0.0.1 at 2014-08-22 12:54:22 -0300
+Processing by CandidatesController#index as HTML
+  [1m[35mCandidate Load (1.0ms)[0m  SELECT "candidates".* FROM "candidates"
+  Rendered candidates/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/candidates.css?body=1" for 127.0.0.1 at 2014-08-22 12:54:22 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-22 12:54:22 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-22 12:54:22 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 12:54:22 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 12:54:22 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 12:54:22 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-22 12:54:22 -0300
+
+
+Started GET "/assets/candidates.js?body=1" for 127.0.0.1 at 2014-08-22 12:54:22 -0300
+
+
+Started GET "/candidates/new" for 127.0.0.1 at 2014-08-22 12:54:23 -0300
+Processing by CandidatesController#new as HTML
+  [1m[36mGender Load (0.3ms)[0m  [1mSELECT "genders".* FROM "genders"[0m
+  Rendered candidates/_form.html.erb (12.2ms)
+  Rendered candidates/new.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/candidates" for 127.0.0.1 at 2014-08-22 12:54:27 -0300
+Processing by CandidatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tw6BtmY3mxVRQncqhLsd16I7tLTw/ENNDehAaLTZO4o=", "candidate"=>{"name"=>"John Doe", "cpf"=>"341421412", "birthdate(1i)"=>"2014", "birthdate(2i)"=>"8", "birthdate(3i)"=>"22", "gender"=>"2"}, "commit"=>"Create Candidate"}
+Unpermitted parameters: gender
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "candidates" ("birthdate", "cpf", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["birthdate", "2014-08-22"], ["cpf", 341421412], ["created_at", "2014-08-22 15:54:27.660448"], ["name", "John Doe"], ["updated_at", "2014-08-22 15:54:27.660448"]]
+  [1m[35m (292.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/candidates/8
+Completed 302 Found in 299ms (ActiveRecord: 292.7ms)
+
+
+Started GET "/candidates/8" for 127.0.0.1 at 2014-08-22 12:54:27 -0300
+Processing by CandidatesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mCandidate Load (0.2ms)[0m  [1mSELECT  "candidates".* FROM "candidates"  WHERE "candidates"."id" = ? LIMIT 1[0m  [["id", 8]]
+  Rendered candidates/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/candidates.css?body=1" for 127.0.0.1 at 2014-08-22 12:54:28 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-22 12:54:28 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 12:54:28 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-22 12:54:28 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 12:54:28 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 12:54:28 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-22 12:54:28 -0300
+
+
+Started GET "/assets/candidates.js?body=1" for 127.0.0.1 at 2014-08-22 12:54:28 -0300
+
+
+Started GET "/candidates" for 127.0.0.1 at 2014-08-22 12:54:29 -0300
+Processing by CandidatesController#index as HTML
+  [1m[35mCandidate Load (0.9ms)[0m  SELECT "candidates".* FROM "candidates"
+  Rendered candidates/index.html.erb within layouts/application (23.2ms)
+Completed 500 Internal Server Error in 28ms
+
+ActionView::Template::Error (undefined local variable or method `gender' for #<#<Class:0x007ffad04ebad8>:0x007ffad017e990>):
+    17:         <td><%= candidate.name %></td>
+    18:         <td><%= candidate.cpf %></td>
+    19:         <td><%= candidate.birthdate %></td>
+    20:         <td><%= gender.name %></td>
+    21:         <td><%= link_to 'Show', candidate %></td>
+    22:         <td><%= link_to 'Edit', edit_candidate_path(candidate) %></td>
+    23:         <td><%= link_to 'Destroy', candidate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  app/views/candidates/index.html.erb:20:in `block in _app_views_candidates_index_html_erb___2853219282061173075_70357608986860'
+  app/views/candidates/index.html.erb:15:in `_app_views_candidates_index_html_erb___2853219282061173075_70357608986860'
+
+
+  Rendered /home/menezes/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/menezes/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/menezes/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.5ms)
+
+
+Started GET "/candidates" for 127.0.0.1 at 2014-08-22 12:54:29 -0300
+Processing by CandidatesController#index as HTML
+  [1m[36mCandidate Load (0.6ms)[0m  [1mSELECT "candidates".* FROM "candidates"[0m
+  Rendered candidates/index.html.erb within layouts/application (18.0ms)
+Completed 500 Internal Server Error in 21ms
+
+ActionView::Template::Error (undefined local variable or method `gender' for #<#<Class:0x007ffad04ebad8>:0x00000004c777f8>):
+    17:         <td><%= candidate.name %></td>
+    18:         <td><%= candidate.cpf %></td>
+    19:         <td><%= candidate.birthdate %></td>
+    20:         <td><%= gender.name %></td>
+    21:         <td><%= link_to 'Show', candidate %></td>
+    22:         <td><%= link_to 'Edit', edit_candidate_path(candidate) %></td>
+    23:         <td><%= link_to 'Destroy', candidate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  app/views/candidates/index.html.erb:20:in `block in _app_views_candidates_index_html_erb___2853219282061173075_70357608602580'
+  app/views/candidates/index.html.erb:15:in `_app_views_candidates_index_html_erb___2853219282061173075_70357608602580'
+
+
+  Rendered /home/menezes/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/menezes/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/menezes/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.1ms)
+
+
+Started GET "/candidates" for 127.0.0.1 at 2014-08-22 12:55:42 -0300
+Processing by CandidatesController#index as HTML
+  [1m[35mCandidate Load (0.4ms)[0m  SELECT "candidates".* FROM "candidates"
+  Rendered candidates/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-22 12:55:42 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 12:55:42 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 12:55:42 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 12:55:42 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-22 12:55:42 -0300
+
+
+Started GET "/assets/candidates.css?body=1" for 127.0.0.1 at 2014-08-22 12:55:42 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-22 12:55:42 -0300
+
+
+Started GET "/assets/candidates.js?body=1" for 127.0.0.1 at 2014-08-22 12:55:42 -0300
+
+
+Started GET "/candidates/new" for 127.0.0.1 at 2014-08-22 12:55:45 -0300
+Processing by CandidatesController#new as HTML
+  [1m[36mGender Load (0.2ms)[0m  [1mSELECT "genders".* FROM "genders"[0m
+  Rendered candidates/_form.html.erb (9.3ms)
+  Rendered candidates/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/candidates" for 127.0.0.1 at 2014-08-22 12:55:51 -0300
+Processing by CandidatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tw6BtmY3mxVRQncqhLsd16I7tLTw/ENNDehAaLTZO4o=", "candidate"=>{"name"=>"John Doe", "cpf"=>"3131231231", "birthdate(1i)"=>"2014", "birthdate(2i)"=>"8", "birthdate(3i)"=>"22", "gender"=>"2"}, "commit"=>"Create Candidate"}
+Unpermitted parameters: gender
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "candidates" ("birthdate", "cpf", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["birthdate", "2014-08-22"], ["cpf", 3131231231], ["created_at", "2014-08-22 15:55:51.156665"], ["name", "John Doe"], ["updated_at", "2014-08-22 15:55:51.156665"]]
+  [1m[35m (337.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/candidates/9
+Completed 302 Found in 343ms (ActiveRecord: 337.5ms)
+
+
+Started GET "/candidates/9" for 127.0.0.1 at 2014-08-22 12:55:51 -0300
+Processing by CandidatesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mCandidate Load (0.6ms)[0m  [1mSELECT  "candidates".* FROM "candidates"  WHERE "candidates"."id" = ? LIMIT 1[0m  [["id", 9]]
+  Rendered candidates/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-22 12:55:51 -0300
+
+
+Started GET "/assets/candidates.css?body=1" for 127.0.0.1 at 2014-08-22 12:55:51 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-22 12:55:51 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 12:55:51 -0300
+
+
+Started GET "/assets/candidates.js?body=1" for 127.0.0.1 at 2014-08-22 12:55:51 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 12:55:51 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 12:55:51 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-22 12:55:51 -0300
+
+
+Started GET "/candidates" for 127.0.0.1 at 2014-08-22 12:56:33 -0300
+Processing by CandidatesController#index as HTML
+  [1m[35mCandidate Load (0.6ms)[0m  SELECT "candidates".* FROM "candidates"
+  Rendered candidates/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/candidates/new" for 127.0.0.1 at 2014-08-22 12:56:34 -0300
+Processing by CandidatesController#new as HTML
+  [1m[36mGender Load (0.4ms)[0m  [1mSELECT "genders".* FROM "genders"[0m
+  Rendered candidates/_form.html.erb (12.0ms)
+  Rendered candidates/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/candidates" for 127.0.0.1 at 2014-08-22 12:56:46 -0300
+Processing by CandidatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tw6BtmY3mxVRQncqhLsd16I7tLTw/ENNDehAaLTZO4o=", "candidate"=>{"name"=>"John Doe", "cpf"=>"1312312312", "birthdate(1i)"=>"2014", "birthdate(2i)"=>"8", "birthdate(3i)"=>"22", "gender"=>"2"}, "commit"=>"Create Candidate"}
+Unpermitted parameters: gender
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "candidates" ("birthdate", "cpf", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["birthdate", "2014-08-22"], ["cpf", 1312312312], ["created_at", "2014-08-22 15:56:46.493297"], ["name", "John Doe"], ["updated_at", "2014-08-22 15:56:46.493297"]]
+  [1m[35m (265.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/candidates/10
+Completed 302 Found in 272ms (ActiveRecord: 266.0ms)
+
+
+Started GET "/candidates/10" for 127.0.0.1 at 2014-08-22 12:56:46 -0300
+Processing by CandidatesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCandidate Load (0.1ms)[0m  [1mSELECT  "candidates".* FROM "candidates"  WHERE "candidates"."id" = ? LIMIT 1[0m  [["id", 10]]
+  Rendered candidates/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-22 12:56:46 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-22 12:56:46 -0300
+
+
+Started GET "/assets/candidates.css?body=1" for 127.0.0.1 at 2014-08-22 12:56:46 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 12:56:46 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 12:56:46 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 12:56:46 -0300
+
+
+Started GET "/assets/candidates.js?body=1" for 127.0.0.1 at 2014-08-22 12:56:46 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-22 12:56:46 -0300
+
+
+Started GET "/candidates" for 127.0.0.1 at 2014-08-22 12:59:06 -0300
+Processing by CandidatesController#index as HTML
+  [1m[35mCandidate Load (0.4ms)[0m  SELECT "candidates".* FROM "candidates"
+  Rendered candidates/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 18ms (Views: 12.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/candidates/new" for 127.0.0.1 at 2014-08-22 12:59:07 -0300
+Processing by CandidatesController#new as HTML
+  [1m[36mGender Load (0.3ms)[0m  [1mSELECT "genders".* FROM "genders"[0m
+  Rendered candidates/_form.html.erb (20.5ms)
+  Rendered candidates/new.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 33ms (Views: 30.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/candidates" for 127.0.0.1 at 2014-08-22 12:59:27 -0300
+Processing by CandidatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tw6BtmY3mxVRQncqhLsd16I7tLTw/ENNDehAaLTZO4o=", "candidate"=>{"name"=>"John Doe", "cpf"=>"11233243523", "birthdate(1i)"=>"2014", "birthdate(2i)"=>"8", "birthdate(3i)"=>"22", "gender"=>"1"}, "commit"=>"Create Candidate"}
+Unpermitted parameters: gender
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "candidates" ("birthdate", "cpf", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["birthdate", "2014-08-22"], ["cpf", 11233243523], ["created_at", "2014-08-22 15:59:27.550184"], ["name", "John Doe"], ["updated_at", "2014-08-22 15:59:27.550184"]]
+  [1m[35m (191.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/candidates/11
+Completed 302 Found in 199ms (ActiveRecord: 192.1ms)
+
+
+Started GET "/candidates/11" for 127.0.0.1 at 2014-08-22 12:59:27 -0300
+Processing by CandidatesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCandidate Load (0.3ms)[0m  [1mSELECT  "candidates".* FROM "candidates"  WHERE "candidates"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered candidates/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-22 12:59:27 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-22 12:59:27 -0300
+
+
+Started GET "/assets/candidates.css?body=1" for 127.0.0.1 at 2014-08-22 12:59:27 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 12:59:27 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 12:59:27 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 12:59:27 -0300
+
+
+Started GET "/assets/candidates.js?body=1" for 127.0.0.1 at 2014-08-22 12:59:27 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-22 12:59:27 -0300

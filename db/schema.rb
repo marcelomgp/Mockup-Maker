@@ -11,16 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140821203901) do
+ActiveRecord::Schema.define(version: 20140822152511) do
 
   create_table "candidates", force: true do |t|
     t.string   "name"
     t.integer  "cpf"
     t.date     "birthdate"
-    t.string   "gender"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "gender_id"
   end
+
+  add_index "candidates", ["gender_id"], name: "index_candidates_on_gender_id"
 
   create_table "genders", force: true do |t|
     t.string   "name"
